@@ -41,6 +41,10 @@ html {
   width: 50%;
 }
 
+.col-full{
+  width: 100%;
+}
+
 .col-third {
   width: calc(100%/3);
 }
@@ -50,6 +54,34 @@ html {
 
 .clear {
   clear: both;
+}
+
+.row::after{
+   content:"";
+   display: block;
+   clear: both;
+}
+
+.mt-8{
+  margin-top: 8px !important;
+}
+
+.mt-16{
+  margin-top: 16px !important;
+}
+
+.btn{
+  margin-top: 15px;
+  display: inline-block;
+  padding: 8px 10px;
+  background-color: black;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+}
+.btn:hover{
+  color:#000;
+  background-color: #ccc;
 }
 
 /* MAIN */
@@ -190,7 +222,8 @@ html {
   margin-left: auto;
   margin-right: auto;
   width: 800px;
-  padding: 64px 0px;
+  padding: 64px 0px 112px;
+
 }
 
 .content-section .section-heading {
@@ -289,7 +322,7 @@ html {
   /* display:inline-block; */
   /* margin-left: -8px;
   margin-right: -8px; */
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
 }
 
 
@@ -320,22 +353,37 @@ html {
 #content .col-third .ticket-img:hover{
   opacity: 0.6;
 }
+/* map sectiton */
+.map-section img{
+  width: 100%;
+}
 
-#content .place-buy-btn{
-  margin-top: 15px;
-  display: inline-block;
-  padding: 8px 10px;
-  background-color: black;
-  color: #fff;
-  text-decoration: none;
-  border: none;
-}
-#content .place-buy-btn:hover{
-  color:#000;
-  background-color: #ccc;
-}
 /* FOOTER */
 #footer {
+  padding: 64px 16px;
+  text-align: center;
+}
+
+#footer .social-list i[class*="ti-"]{
+  font-size: 24px;
+}
+
+#footer .social-list a{
+  color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+#footer .social-list a:hover{
+  color: rgba(0, 0, 0, 0.3);
+}
+
+#footer .copy-right{
+  color: rgba(0, 0, 0, 0.5);
+}
+
+#footer .copy-right a{
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .modal {
@@ -446,3 +494,36 @@ html {
     transform: translateY(0);
   }
 }
+
+.content-suv .contact-content{
+  margin-top: 48px;
+}
+.contact-content .contact-info{
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.contact-content .contact-info i[class*="ti-"] {
+  width: 30px;
+  display: inline-block;
+}
+
+.contact-content .row .contact-form{
+  font-size: 15px;
+}
+
+.contact-content .contact-form .form-control{
+  padding: 4px;
+  border: 1px solid #ccc;
+  width: 100%;
+  outline: none;
+  padding: 15px;
+}
+.contact-content .contact-form .form-submit-btn{
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 10px 16px;
+  float: right;
+}
+
