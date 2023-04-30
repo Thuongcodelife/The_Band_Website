@@ -107,7 +107,7 @@
                   <h3 class="ticket-name">NEW YORK</h3>
                   <p class="ticket-date">Fri 27 Nov 2016</p>
                   <p class="ticket-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="" class="place-buy-btn">Buy ticket</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy ticket</button>
                 </div>
               </div>
 
@@ -117,17 +117,17 @@
                   <h3 class="ticket-name">PARIS</h3>
                   <p class="ticket-date">Sat 28 Nov 2016</p>
                   <p class="ticket-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="" class="place-buy-btn">Buy ticket</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy ticket</button>
                 </div>
               </div>
 
-              <div class="ticket-item">
+              <div class="ticket-item"> 
                 <img src="/Website_The_Band/assets/img/sanfran.jpg" alt="" class="ticket-img">
                 <div class="pad">
                   <h3 class="ticket-name">SAN FRANCISCO</h3>
                   <p class="ticket-date">Sun 29 Nov 2016</p>
                   <p class="ticket-content">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                  <a href="" class="place-buy-btn">Buy ticket</a>
+                  <button class="place-buy-btn js-buy-ticket">Buy ticket</button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -147,9 +147,9 @@
       <div id="footer"></div>
     </div>
     <!-- Modal-Buy-Ticket -->
-    <div class="modal">
-      <div class="modal-container">
-        <div class="modal-close">
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container">
+        <div class="modal-close js-modal-close">
           <i class="modal-close-heading ti-close"></i>
         </div>
 
@@ -183,5 +183,34 @@
 
       </div>
     </div>
+    <script>
+      const buyBtns = document.querySelectorAll('.js-buy-ticket')
+      const modal = document.querySelector('.js-modal')
+      const modalContainer = document.querySelector('.js-modal-container')
+      const modalClose = document.querySelector('.js-modal-close')
+
+      // mở class open
+      function showBuyTickets() {
+        modal.classList.add('open')     
+      }
+
+      // gỡ bỏ class open
+      function closeBuyTickets() {
+        modal.classList.remove('open')
+      }
+
+      // lập danh sách để check nhiều nút
+      for( const buyBtn of buyBtns)
+      {
+        // lắng nghe hành vi người dùng
+        buyBtn.addEventListener('click', showBuyTickets)
+      }
+
+      modalClose.addEventListener('click',closeBuyTickets)
+      modal.addEventListener('click',closeBuyTickets)
+      modalContainer.addEventListener('click', function(event){
+        event.stopPropagation()
+      })
+    </script>
   </body>
 </html>

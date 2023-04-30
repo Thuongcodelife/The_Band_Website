@@ -317,6 +317,7 @@ html {
   background-color: black;
   color: #fff;
   text-decoration: none;
+  border: none;
 }
 #content .place-buy-btn:hover{
   color:#000;
@@ -357,6 +358,7 @@ html {
   opacity: 0.9;
 }
 
+
 .modal .modal-container .modal-close{
   background-color: #009688;
   display: flex;  
@@ -379,7 +381,7 @@ html {
   max-width: calc(100% - 32px);
   min-height: 200px;
   position: relative;
-
+  animation: modalFadeIn ease 0.4s;
 }
 
 .modal .modal-container .buy-tickets{
@@ -424,3 +426,12 @@ html {
   /* text-decoration: none; */
 }
 
+@keyframes modalFadeIn {
+  from{
+    opacity: 0;
+    transform: translateY(-140px);
+  } to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
