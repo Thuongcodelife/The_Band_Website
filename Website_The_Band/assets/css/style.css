@@ -25,6 +25,29 @@ html {
  */
 
 /* Clear float */
+/* Common */
+.row{
+  margin-left: -8px;
+  margin-right: -8px;
+}
+
+.col{
+  float: left;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.col-half{
+  width: 50%;
+}
+
+.col-third {
+  width: calc(100%/3);
+}
+.text-center{
+  text-align: center;
+}
+
 .clear {
   clear: both;
 }
@@ -192,16 +215,9 @@ html {
   line-height: 1.4;
 }
 
-/* Band Member */
-#content .member-item {
-  /* display:inline-block; */
-  float: left;
-  width: calc(100% / 3);
-}
-
 #content .member-list {
   margin-top: 48px;
-  text-align: center;
+  /* text-align: center; */
   /* overflow:hidden; */
 }
 
@@ -269,22 +285,17 @@ html {
   /* height: 120px; */
 }
 #content .ticket-list{
-  margin: 32px 0px;
+  margin-top: 32px;
   /* display:inline-block; */
-  margin-left: -8px;
-  margin-right: -8px;
+  /* margin-left: -8px;
+  margin-right: -8px; */
+  margin-bottom: 48px;
 }
 
 
 
 
-#content .ticket-item {
-  float: left;
-  /* background-color: #fff; */
-  width: calc(100%/3);
-  padding: 0px 8px;
-  /* margin: 0px 10px; */
-}
+
 
 #content .ticket-name{
   font-size: 15px;
@@ -301,12 +312,12 @@ html {
   line-height: 1.5;
 }
 
-#content .ticket-item .ticket-img {
+#content .col-third .ticket-img {
   width: 100%;
   display: block;
 }
 
-#content .ticket-item .ticket-img:hover{
+#content .col-third .ticket-img:hover{
   opacity: 0.6;
 }
 
