@@ -7,6 +7,8 @@
 }
 
 html {
+  /* scroll */
+  scroll-behavior: smooth;
   font-family: helvetica, arial, sans-serif;
   /* Thay đổi font của website */
 }
